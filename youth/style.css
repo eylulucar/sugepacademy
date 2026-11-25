@@ -504,7 +504,7 @@ button:focus-visible {
 }
 @media (max-width: 850px) {
   html:not(.js) header {
-    position: static;
+    position: relative;
   }
   html:not(.js) .nav {
     height: auto;

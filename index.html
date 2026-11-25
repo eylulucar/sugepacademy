@@ -12,6 +12,13 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="preload" as="image" href="./assets/ege.webp" />
     <script src="./script.js" defer></script>
+    <link rel="canonical" href="https://sugepacademy.org/">
+    <link rel="alternate" hreflang="tr" href="https://sugepacademy.org/">
+    <link rel="alternate" hreflang="en" href="https://sugepacademy.org/en/">
+    <link rel="alternate" hreflang="fr" href="https://sugepacademy.org/fr/">
+    <link rel="alternate" hreflang="x-default" href="https://sugepacademy.org/">
+    <link rel="stylesheet" href="assets/language.css">
+    <script defer src="assets/language.js"></script>
   </head>
   <body>
     <a class="skip" href="#icerik">İçeriğe geç</a>
@@ -95,11 +102,19 @@
           >Harekete Geç
           <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-up-right"></use></svg
         ></a>
+        <details class="languages">
+          <summary aria-label="Dil seçimi · Türkçe">TR <span aria-hidden="true">▾</span></summary>
+          <nav aria-label="Dil seçimi">
+              <a href="./" hreflang="tr" lang="tr" aria-current="page">Türkçe</a>
+              <a href="en/" hreflang="en" lang="en">English</a>
+              <a href="fr/" hreflang="fr" lang="fr">Français</a>
+          </nav>
+        </details>
         <button
           class="menu-toggle"
           type="button"
           aria-controls="menu"
-          aria-expanded="false"
+          aria-expanded="false" data-close-label="Menüyü kapat"
           aria-label="Menüyü aç"
         >
           <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-menu"></use></svg
@@ -135,7 +150,7 @@
         </div>
       </section>
       <!-- Sayaçların son değerleri JavaScript kapalıyken de okunabilir. -->
-      <section class="numbers" aria-labelledby="numbers-title">
+      <section id="rakamlar" class="numbers" aria-labelledby="numbers-title">
         <div class="wrap number-row">
           <h2 id="numbers-title">Rakamlarla <br />SÜGEP<span>.</span></h2>
           <dl class="metrics">
@@ -415,7 +430,11 @@
           <h3>E-bülten</h3>
           <p>Abone olmak istediğiniz adresi girin. Talebinizi e-posta uygulamanızdan gönderebilirsiniz.</p>
           <!-- Bu statik form, adresi depolamadan kullanıcının göndereceği mesajı hazırlar. -->
-          <form id="newsletter" hidden>
+          <form id="newsletter" hidden
+            data-message="Merhaba, SÜGEP Academy e-bültenine abone olmak istiyorum. E-posta adresim:"
+            data-ready="Talebiniz hazır. E-posta taslağını açıp gönderebilirsiniz."
+            data-copied="Mesaj kopyalandı. contact@sugepacademy.org adresine gönderebilirsiniz."
+            data-selected="Mesaj seçildi. Cihazınızın kopyalama komutunu kullanabilirsiniz.">
             <label for="email">E-posta adresiniz</label>
             <div class="input-row">
               <input

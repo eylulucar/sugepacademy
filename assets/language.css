@@ -1,0 +1,49 @@
+/* The same compact language menu works on both the light and dark headers. */
+.languages {
+  position: relative;
+  flex: none;
+  color: inherit;
+  font-size: 14px;
+}
+.languages > summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-height: 42px;
+  padding: 0 9px;
+  border: 1px solid currentColor;
+  border-radius: 6px;
+  list-style: none;
+  color: inherit;
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+}
+.languages summary::-webkit-details-marker { display: none; }
+.languages nav {
+  position: absolute;
+  z-index: 2;
+  top: calc(100% + 5px);
+  right: 0;
+  min-width: 135px;
+  padding: 4px;
+  border: 1px solid #bccdc4;
+  border-radius: 8px;
+  box-shadow: 0 5px 16px #17362c24;
+  color: #143b31;
+  background: white;
+}
+.languages a { display: block; padding: 9px 12px; border-radius: 4px; }
+.languages a:hover, .languages a:focus-visible { background: #edf4e8; }
+.languages a[aria-current] { font-weight: 750; text-decoration: underline; text-underline-offset: 3px; }
+.languages summary:focus-visible { outline: 3px solid #d39721; outline-offset: 3px; }
+
+@media (max-width: 1160px) {
+  .header-cta, .nav-cta { display: none; }
+  .nav-row, .nav { gap: 9px; }
+}
+@media (max-width: 850px) {
+  .nav > .languages { margin-inline-start: auto; }
+  .nav .brand small { max-width: 19em; }
+}

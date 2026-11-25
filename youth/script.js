@@ -2,10 +2,11 @@
 // Yerel bölüm bağlantıları ve Academy bağlantısı JavaScript olmadan da çalışır.
 const toggle = document.querySelector("#menu");
 const menu = document.querySelector("#links");
+const openLabel = toggle.getAttribute("aria-label");
 function setMenu(open) {
   menu.classList.toggle("open", open);
   toggle.setAttribute("aria-expanded", String(open));
-  toggle.setAttribute("aria-label", open ? "Menüyü kapat" : "Menüyü aç");
+  toggle.setAttribute("aria-label", open ? toggle.dataset.closeLabel : openLabel);
 }
 toggle.addEventListener("click", () => setMenu(!menu.classList.contains("open")));
 document.addEventListener("click", (event) => {

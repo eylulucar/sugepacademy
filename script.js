@@ -8,9 +8,10 @@ const sections = links.map((link) => document.querySelector(link.hash));
 const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
 const mobile = matchMedia("(max-width: 940px)");
 
+const openLabel = toggle.getAttribute("aria-label");
 function setMenu(open) {
   toggle.setAttribute("aria-expanded", String(open));
-  toggle.setAttribute("aria-label", open ? "Menüyü kapat" : "Menüyü aç");
+  toggle.setAttribute("aria-label", open ? toggle.dataset.closeLabel : openLabel);
   menu.classList.toggle("is-open", open);
 }
 
@@ -103,10 +104,10 @@ form.hidden = false;
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   requestText.value =
-    "Merhaba, SÜGEP Academy e-bültenine abone olmak istiyorum. E-posta adresim: " + email.value.trim();
+    form.dataset.message + " " + email.value.trim();
   mailLink.href = mailBase + "&body=" + encodeURIComponent(requestText.value);
   panel.hidden = false;
-  status.textContent = "Talebiniz hazır. E-posta taslağını açıp gönderebilirsiniz.";
+  status.textContent = form.dataset.ready;
   requestText.focus();
 });
 
@@ -120,10 +121,10 @@ email.addEventListener("input", () => {
 document.querySelector("#copy").addEventListener("click", async () => {
   try {
     await navigator.clipboard.writeText(requestText.value);
-    status.textContent = "Mesaj kopyalandı. contact@sugepacademy.org adresine gönderebilirsiniz.";
+    status.textContent = form.dataset.copied;
   } catch {
     requestText.focus();
     requestText.select();
-    status.textContent = "Mesaj seçildi. Cihazınızın kopyalama komutunu kullanabilirsiniz.";
+    status.textContent = form.dataset.selected;
   }
 });
