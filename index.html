@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SÜGEP Academy | Genç Sürdürülebilirlik Liderleri</title>
+    <meta
+      name="description"
+      content="İzmir merkezli SÜGEP Academy'nin genç sürdürülebilirlik liderleri programlarını, saha projelerini ve genç liderlerini keşfedin."
+    />
+    <meta name="theme-color" content="#073f34" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preload" as="image" href="./assets/ege.webp" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#icerik">İçeriğe geç</a>
+    <!-- Paylaşılan çizgi ikonları tek bir yerel sembol kümesinden gelir. -->
+    <svg class="symbols" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6" /></symbol>
+        <symbol id="i-up-right" viewBox="0 0 24 24"><path d="M5.5 18.5l13-13m-11 0h11v11" /></symbol>
+        <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v15m-6-6 6 6 6-6" /></symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24">
+          <path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" />
+          <circle cx="12" cy="10" r="2.4" />
+        </symbol>
+        <symbol id="i-leaf" viewBox="0 0 24 24">
+          <path d="M20.5 3.5C10 3.5 4 6 4 12.5a6.5 6.5 0 0 0 6.5 6.5c6 0 10-6 10-15.5ZM3 21l12-12" />
+        </symbol>
+        <symbol id="i-globe" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9" />
+          <ellipse cx="12" cy="12" rx="4" ry="9" />
+          <path d="M3 12h18" />
+        </symbol>
+        <symbol id="i-book" viewBox="0 0 24 24">
+          <path
+            d="M3 5c3.4-.6 6.1.1 9 2.2C15 5.1 17.6 4.4 21 5v14c-3.4-.6-6 .2-9 2-2.9-1.8-5.6-2.6-9-2Zm9 2.2V21"
+          />
+        </symbol>
+        <symbol id="i-users" viewBox="0 0 24 24">
+          <circle cx="9" cy="8" r="3" />
+          <path d="M3 20v-2a6 6 0 0 1 12 0v2m1-16a3.4 3.4 0 0 1 0 6.6M18 14c2.3.6 3.5 2.1 3.5 5" />
+        </symbol>
+        <symbol id="i-sprout" viewBox="0 0 24 24">
+          <path d="M12 21v-7C6 14 3 11 3 6c6 0 9 3 9 8Zm0 2.5C12 9 15 5 21 4c0 7-3.2 10-9 10" />
+        </symbol>
+        <symbol id="i-compass" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9" />
+          <path d="m16.5 7.5-3 6-6 3 3-6Z" />
+        </symbol>
+        <symbol id="i-stack" viewBox="0 0 24 24">
+          <path d="m12 3 9 5-9 5-9-5Zm-9 10 9 5 9-5M3 18l9 5 9-5" />
+        </symbol>
+        <symbol id="i-instagram" viewBox="0 0 24 24">
+          <rect x="3" y="3" width="18" height="18" rx="5" />
+          <circle cx="12" cy="12" r="4" />
+          <circle cx="17.5" cy="6.7" r=".7" fill="currentColor" />
+        </symbol>
+        <symbol id="i-youtube" viewBox="0 0 24 24">
+          <rect x="2" y="5" width="20" height="14" rx="4" />
+          <path d="m10 9 5 3-5 3Z" />
+        </symbol>
+        <symbol id="i-facebook" viewBox="0 0 24 24">
+          <path
+            d="M14 22v-9h3l.6-3H14V8c0-1.6.6-2 2.1-2H18V3.2c-.8-.2-1.8-.2-2.5-.2-3.2 0-5 1.8-5 5v2H8v3h2.5v9"
+          />
+        </symbol>
+        <symbol id="i-linkedin" viewBox="0 0 24 24">
+          <rect x="3" y="3" width="18" height="18" rx="3" />
+          <path d="M7.5 10.5V17m4-6.5V17m0-4c0-3.5 5-4 5 0v4" />
+          <circle cx="7.5" cy="7.5" r=".7" fill="currentColor" />
+        </symbol>
+        <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18" /></symbol>
+        <symbol id="i-close" viewBox="0 0 24 24"><path d="m5 5 14 14m0-14L5 19" /></symbol>
+        <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14m-7-7v14" /></symbol>
+        <symbol id="i-copy" viewBox="0 0 24 24">
+          <rect x="8" y="8" width="12" height="13" rx="2" />
+          <path d="M15 8V4H4v12h4" />
+        </symbol>
+      </defs>
+    </svg>
+    <!-- Kurumsal logo hazır olduğunda brand-mark alanı değiştirilebilir. -->
+    <header class="site-header">
+      <div class="wrap nav-row">
+        <a class="brand" href="#anasayfa" aria-label="SÜGEP Academy ana sayfa"
+          ><span class="brand-mark" aria-hidden="true"></span><span><b>SÜGEP</b> Academy</span></a
+        >
+        <nav id="menu" class="nav-links" aria-label="Ana menü">
+          <a href="#anasayfa">Ana Sayfa</a><a href="#programlar">Programlar</a
+          ><a href="#projeler">Projeler</a><a href="#hakkimizda">Hakkımızda</a
+          ><a href="#iletisim">İletişim</a>
+        </nav>
+        <a class="btn header-cta" href="#iletisim"
+          >Harekete Geç
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-up-right"></use></svg
+        ></a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-controls="menu"
+          aria-expanded="false"
+          aria-label="Menüyü aç"
+        >
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-menu"></use></svg
+          ><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-close"></use></svg>
+        </button>
+      </div>
+    </header>
+    <main id="icerik">
+      <section class="hero" id="anasayfa" aria-labelledby="hero-title">
+        <div class="wrap hero-inner">
+          <div class="place">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-pin"></use></svg> İzmir,
+            Türkiye
+          </div>
+          <h1 id="hero-title">Geleceği Dönüştüren <em>Genç Sürdürülebilirlik</em> Liderleri Yetişiyor</h1>
+          <p>
+            Bilmekten yapmaya, sınıftan sahaya. İzmir’den yola çıkan gençler, sürdürülebilir bir gelecek
+            için fikirlerini projeye dönüştürüyor.
+          </p>
+          <div class="actions">
+            <a class="btn lime" href="#programlar"
+              >Programları Keşfet
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow"></use></svg
+            ></a>
+            <a class="btn ghost" href="#projeler"
+              >Projeleri İncele
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-down"></use></svg
+            ></a>
+          </div>
+        </div>
+        <div class="hero-foot wrap">
+          <span class="location-note"><i></i>EGE KIYILARI</span>
+        </div>
+      </section>
+      <!-- Sayaçların son değerleri JavaScript kapalıyken de okunabilir. -->
+      <section class="numbers" aria-labelledby="numbers-title">
+        <div class="wrap number-row">
+          <h2 id="numbers-title">Rakamlarla <br />SÜGEP<span>.</span></h2>
+          <dl class="metrics">
+            <div class="metric">
+              <dt>Küresel Amaç</dt>
+              <dd>
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-globe"></use></svg
+                ><span data-count="17">17</span>
+              </dd>
+            </div>
+            <div class="metric">
+              <dt>Akademi Programı</dt>
+              <dd>
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-book"></use></svg
+                ><span data-count="3">3</span>
+              </dd>
+            </div>
+            <div class="metric">
+              <dt>Örnek Proje</dt>
+              <dd>
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-sprout"></use></svg
+                ><span data-count="3">3</span>
+              </dd>
+            </div>
+            <div class="metric">
+              <dt>İş Birliği Kurumu</dt>
+              <dd>
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-users"></use></svg
+                ><span data-count="3">3</span>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+      <section class="section programs" id="programlar" aria-labelledby="programs-title">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <span class="kicker"><i></i>PROGRAMLAR</span>
+              <h2 id="programs-title">Programlar ve Etki Alanları</h2>
+            </div>
+            <p>
+              Gençlerin yerel ihtiyaçları keşfetmesi ve kendi çözümünü geliştirmesi için üç öğrenme yolu.
+            </p>
+          </div>
+          <div class="card-grid">
+            <article class="program card tone-0">
+              <span class="tile-icon"
+                ><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-sprout"></use></svg
+              ></span>
+              <h3>Genç Sürdürülebilirlik Liderleri Programı</h3>
+              <p>
+                Birleşmiş Milletler Sürdürülebilir Kalkınma Amaçlarını İzmir’deki gündelik sorunlarla
+                buluşturan proje çalışmaları.
+              </p>
+              <details>
+                <summary>
+                  Program detayları
+                  <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-plus"></use></svg>
+                </summary>
+                <p>
+                  Gençler bir saha sorusu seçer, gözlemlerini kaydeder ve çözüm önerilerini sunar.
+                  Araştırma raporları ile sunumlar akademik portfolyolarına katkı sağlar.
+                </p>
+                <a class="text-link" href="https://sugep.exposure.co/sdg-youth-leadership-program"
+                  >Saha günlüğü
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="#i-up-right"></use></svg
+                ></a>
+              </details>
+            </article>
+            <article class="program card tone-1">
+              <span class="tile-icon"
+                ><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-globe"></use></svg
+              ></span>
+              <h3>Sürdürülebilirlik Elçileri Programı</h3>
+              <p>
+                Okul topluluklarında sürdürülebilirlik kültürünü akran öğrenmesiyle yaygınlaştıran genç
+                elçiler.
+              </p>
+              <details>
+                <summary>
+                  Program detayları
+                  <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-plus"></use></svg>
+                </summary>
+                <p>
+                  Öğrenciler, okulda fark ettikleri bir ihtiyacı arkadaşlarıyla tartışır. Ortak bir amaç
+                  belirleyerek kampanya ve atölye fikirleri geliştirir.
+                </p>
+                <a class="text-link" href="https://sugep.exposure.co/izmir-turk-koleji"
+                  >Saha günlüğü
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="#i-up-right"></use></svg
+                ></a>
+              </details>
+            </article>
+            <article class="program card tone-2">
+              <span class="tile-icon"
+                ><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-compass"></use></svg
+              ></span>
+              <h3>Youth Action Hub</h3>
+              <p>Gençlik Eylem Merkezi’nde saha gözlemini atölyeye taşıyan disiplinler arası ekipler.</p>
+              <details>
+                <summary>
+                  Program detayları
+                  <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-plus"></use></svg>
+                </summary>
+                <p>
+                  Ekipler fikirlerini küçük ölçekli denemelerle sınar. Prototipleri, malzeme seçimlerini
+                  ve saha notlarını paylaşarak birbirlerinin çalışmalarına katkı verir.
+                </p>
+                <a class="text-link" href="https://www.youtube.com/@sugepacademy9947"
+                  >Akademinin videoları
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="#i-up-right"></use></svg
+                ></a>
+              </details>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section projects" id="projeler" aria-labelledby="projects-title">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <span class="kicker"><i></i>PROJELER</span>
+              <h2 id="projects-title">Sahadan Projeler</h2>
+            </div>
+            <a class="text-link" href="https://sugep.exposure.co/"
+              >Exposure proje günlüğü
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-up-right"></use></svg
+            ></a>
+          </div>
+          <div class="card-grid">
+            <article class="project card">
+              <div class="project-photo">
+                <img src="./assets/solar.webp" width="620" height="380" alt="" loading="lazy" /><span
+                  >ENERJİ</span
+                >
+              </div>
+              <div class="project-copy">
+                <h3>Solar Mont</h3>
+                <p>
+                  Giyilebilir güneş enerjisi fikrinden yola çıkan bu proje, yenilenebilir enerjinin günlük
+                  yaşamdaki kullanımını ele alıyor.
+                </p>
+                <a class="text-link" href="https://sugep.exposure.co/sdg-youth-leadership-program"
+                  >Liderlik programı günlüğü
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="#i-up-right"></use></svg
+                ></a>
+              </div>
+            </article>
+            <article class="project card">
+              <div class="project-photo">
+                <img src="./assets/biopolimer.webp" width="620" height="380" alt="" loading="lazy" /><span
+                  >MALZEME</span
+                >
+              </div>
+              <div class="project-copy">
+                <h3>Biyopolimer Atölyeleri</h3>
+                <p>
+                  Gençler biyolojik kaynaklı malzemeleri inceliyor ve atölyede sürdürülebilir tasarımın
+                  olanaklarını araştırıyor.
+                </p>
+                <a class="text-link" href="https://sugep.exposure.co/izmir-turk-koleji"
+                  >İTK saha günlüğü
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="#i-up-right"></use></svg
+                ></a>
+              </div>
+            </article>
+            <article class="project card">
+              <div class="project-photo">
+                <img src="./assets/lithophaga.webp" width="620" height="380" alt="" loading="lazy" /><span
+                  >ARAŞTIRMA</span
+                >
+              </div>
+              <div class="project-copy">
+                <h3>Lithophaga Araştırmaları</h3>
+                <p>
+                  İzmirli öğrencilerin hurma midyesi ve böbrek taşları üzerine çalışması, deniz
+                  bilimleriyle sağlık araştırmalarını buluşturan bir öğrenci projesi.
+                </p>
+                <a
+                  class="text-link"
+                  href="https://www.dha.com.tr/yerel-haberler/izmir/liselilerden-bobrek-tasina-yonelik-bilimsel-ara-2973177"
+                  >DHA haberini oku
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="#i-up-right"></use></svg
+                ></a>
+              </div>
+            </article>
+          </div>
+          <small class="credit">Kıyı ve proje görselleri temsili illüstrasyonlardır.</small>
+        </div>
+      </section>
+      <section class="section about" id="hakkimizda" aria-labelledby="about-title">
+        <div class="wrap about-grid">
+          <div>
+            <span class="kicker"><i></i>HAKKIMIZDA</span>
+            <h2 id="about-title">
+              Bilmekten Yapmaya<span class="heading-sub">Eğitimde Paradigma Değişimi</span>
+            </h2>
+            <p>
+              <strong>Umut Dilsiz</strong> tarafından İzmir’de kurulan SÜGEP Academy, gençlerin küresel
+              amaçlara yaşadıkları yerden katkı vermesini hedefliyor.
+            </p>
+            <p>
+              Saha çalışmaları ve atölyelerden doğan bulgular, akademik makale taslaklarına ve
+              uluslararası yayınlar için raporlara dönüşebiliyor. Bu çalışmalar, yurt dışında üniversite
+              eğitimi hedefleyen gençlerin kendi katkılarını belgeledikleri akademik portfolyolarına temel
+              oluşturuyor.
+            </p>
+            <a
+              class="text-link"
+              href="https://www.ozelturkkoleji.com/en/we-educate-young-sustainability-leaders/"
+              >İTK’nın program yazısı
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-up-right"></use></svg
+            ></a>
+          </div>
+          <div class="about-panel">
+            <h3>Genç sürdürülebilirlik liderleri</h3>
+            <ul class="leaders">
+              <li>
+                <span class="initial">EU</span><span>Eylül Uçar</span
+                ><a href="https://tr.linkedin.com/in/eylul-ucar" aria-label="Eylül Uçar, LinkedIn"
+                  ><svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="#i-linkedin"></use></svg
+                ></a>
+              </li>
+              <li>
+                <span class="initial">DD</span><span>Defne Mey Dilsiz</span
+                ><a
+                  href="https://tr.linkedin.com/in/defne-mey-dilsiz-5473402ba"
+                  aria-label="Defne Mey Dilsiz, LinkedIn"
+                  ><svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="#i-linkedin"></use></svg
+                ></a>
+              </li>
+            </ul>
+            <h3>İzmir’de kurumsal iş birlikleri</h3>
+            <p>
+              İzmir Özel Türk Koleji (İTK), Bahçeşehir Koleji ve Ege Sanayicileri ve İşinsanları Derneği
+              (ESİAD).
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" id="iletisim">
+      <div class="wrap footer-grid">
+        <div>
+          <span class="kicker"><i></i>İLETİŞİM</span>
+          <h2>Harekete geç.</h2>
+          <p>
+            Programlar ve proje iş birlikleri için SÜGEP Academy’ye sosyal medya üzerinden
+            ulaşabilirsiniz.
+          </p>
+          <address>
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-pin"></use></svg> İzmir,
+            Türkiye
+          </address>
+          <div class="social">
+            <a href="https://www.instagram.com/sugep_academy/" aria-label="SÜGEP Academy, Instagram"
+              ><svg class="icon" aria-hidden="true" focusable="false">
+                <use href="#i-instagram"></use></svg></a
+            ><a href="https://www.youtube.com/@sugepacademy9947" aria-label="SÜGEP Academy, YouTube"
+              ><svg class="icon" aria-hidden="true" focusable="false">
+                <use href="#i-youtube"></use></svg></a
+            ><a href="https://www.facebook.com/educationforsdg/" aria-label="SÜGEP Academy, Facebook"
+              ><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-facebook"></use></svg
+            ></a>
+          </div>
+        </div>
+        <div class="newsletter">
+          <h3>E-bülten</h3>
+          <p>Abonelik talebinizi hazırlayın ve SÜGEP Academy’ye Instagram mesajı olarak gönderin.</p>
+          <!-- Bu statik form, adresi depolamadan kullanıcının göndereceği mesajı hazırlar. -->
+          <form id="newsletter" hidden>
+            <label for="email">E-posta adresiniz</label>
+            <div class="input-row">
+              <input
+                type="email"
+                id="email"
+                autocomplete="email"
+                placeholder="ornek@eposta.com"
+                required
+              /><button type="submit" class="btn lime">
+                Talep hazırla
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow"></use></svg>
+              </button>
+            </div>
+          </form>
+          <div id="request-panel" hidden>
+            <label for="request-text">Göndereceğiniz mesaj</label
+            ><textarea id="request-text" rows="3" readonly></textarea>
+            <div class="request-actions">
+              <button type="button" class="text-link" id="copy">
+                Mesajı kopyala
+                <svg class="icon" aria-hidden="true" focusable="false">
+                  <use href="#i-copy"></use>
+                </svg></button
+              ><a class="text-link" href="https://www.instagram.com/sugep_academy/"
+                >Instagram’ı aç
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-up-right"></use></svg
+              ></a>
+            </div>
+          </div>
+          <p id="status" role="status" class="status"></p>
+          <noscript
+            ><a href="https://www.instagram.com/sugep_academy/"
+              >Instagram üzerinden talep gönderin</a
+            ></noscript
+          >
+        </div>
+      </div>
+      <div class="wrap footer-bottom">
+        <a class="brand" href="#anasayfa" aria-label="SÜGEP Academy ana sayfa"
+          ><span class="brand-mark" aria-hidden="true"></span><span><b>SÜGEP</b> Academy</span></a
+        ><span>İzmir, Türkiye</span><a href="#anasayfa">Başa dön ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>
