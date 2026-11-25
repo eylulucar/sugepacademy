@@ -974,3 +974,9 @@ summary:hover {
     display: none;
   }
 }
+
+.contact-email {
+  color: var(--lime);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}

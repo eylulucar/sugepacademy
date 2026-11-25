@@ -3,7 +3,7 @@
 // Bölüm bağlantıları normal HTML çapalarıdır. JavaScript mobil menüyü geliştirir.
 const menu = document.querySelector("#menu");
 const toggle = document.querySelector(".menu-toggle");
-const links = [...menu.querySelectorAll("a")];
+const links = [...menu.querySelectorAll('a[href^="#"]')];
 const sections = links.map((link) => document.querySelector(link.hash));
 const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
 const mobile = matchMedia("(max-width: 940px)");
@@ -91,24 +91,28 @@ if ("IntersectionObserver" in window && !reducedMotion.matches) {
 }
 
 // Bülten servisi tanımlı olmadığı için talep yalnızca kullanıcının tarayıcısında hazırlanır.
-// Kullanıcı mesajı kopyalayıp akademinin hesabına kendisi gönderir.
+// Son gönderim kullanıcının e-posta uygulamasında yapılır.
 const form = document.querySelector("#newsletter");
 const email = document.querySelector("#email");
 const panel = document.querySelector("#request-panel");
 const requestText = document.querySelector("#request-text");
 const status = document.querySelector("#status");
+const mailLink = document.querySelector("#request-mail");
+const mailBase = mailLink.href;
 form.hidden = false;
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   requestText.value =
     "Merhaba, SÜGEP Academy e-bültenine abone olmak istiyorum. E-posta adresim: " + email.value.trim();
+  mailLink.href = mailBase + "&body=" + encodeURIComponent(requestText.value);
   panel.hidden = false;
-  status.textContent = "Talebiniz hazır. Mesajı kopyalayıp akademinin Instagram hesabına gönderin.";
+  status.textContent = "Talebiniz hazır. E-posta taslağını açıp gönderebilirsiniz.";
   requestText.focus();
 });
 
 email.addEventListener("input", () => {
   panel.hidden = true;
+  mailLink.href = mailBase;
   requestText.value = "";
   status.textContent = "";
 });
@@ -116,7 +120,7 @@ email.addEventListener("input", () => {
 document.querySelector("#copy").addEventListener("click", async () => {
   try {
     await navigator.clipboard.writeText(requestText.value);
-    status.textContent = "Mesaj kopyalandı. Instagram’da SÜGEP Academy’ye gönderebilirsiniz.";
+    status.textContent = "Mesaj kopyalandı. contact@sugepacademy.org adresine gönderebilirsiniz.";
   } catch {
     requestText.focus();
     requestText.select();
