@@ -980,3 +980,6 @@ summary:hover {
   text-decoration: underline;
   text-underline-offset: 0.2em;
 }
+.field-note { margin: 1.25rem 0 0; line-height: 1.65; }
+.field-note a, .leaders .leader-profile { color: var(--green); text-decoration: underline; text-underline-offset: 3px; }
+.leaders .leader-profile { padding: 0; }
